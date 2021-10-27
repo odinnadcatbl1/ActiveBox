@@ -1,0 +1,143 @@
+body {
+    margin: 0;/* по умолчанию есть отступы по 8px, убираем их */
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+    /*сглазим шрифты*/
+    -webkit-font-smoothing: antialiased ;
+
+    background-color: #fff;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box; /*алгоритм подсчета размера блоков с учётом padding*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px 0; /*у абзацев оставили отступы только снизу*/
+}
+/* Container ============ */
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto; /*внешние отступы по нулям снизу и сверху, и авто - выровнять по середине */
+}
+
+/* HEADER =========== */
+
+.header {
+    width: 100%;
+    height: 100px;
+
+    position: absolute; /*сделаем шапку навигации поверх intro*/
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between; /* это значит, что между элементами нашего header_inner будет пустое место*/
+    align-items: center; /*расположим элементы внутри него по центру (по горизонтали)*/
+    padding: 35px; /* внутренний отступ сверху и снизу*/
+    border-bottom: 1px solid #515369; /* добавили полоску*/
+}
+
+/* Navigation =========== */
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase; /* сделали все символы большими */
+}
+
+.nav__link {
+    margin-left: 50px;
+    color: #fff;
+    text-decoration: none; /* убираем подчеркивание ссылок снизу*/
+    opacity: 0.75; /*сделали ссылки полупрозрачными*/
+
+    transition: opacity 0.1s linear; /*добавили плавность для прозрачности*/
+}
+
+.nav__link:first-child { /*псевдокласс - первый элемент*/
+    margin-left: 0px;
+}
+
+/*с помощью псевдокласса hover оформим ссылки при наведении на них*/
+.nav__link:hover {
+    /*text-decoration: underline; - чтобы ссылка подчеркивалась*/ 
+    opacity: 1; /*чтобы при наведении курсора пропадала прозрачность*/
+}
+
+
+/* Intro ================== */
+
+.intro {
+    display: flex;
+    flex-direction: column; /*каждый элемент интро будет начинаться с новой строки*/
+    justify-content: center; /*чтобы выровнять контент по центру по вертикали*/
+    height: 750px;
+    padding-top: 100px; /*чтобы интро начиналось на таком расстояние(размер шапки), т.к. шапка поверх всего*/
+    background: #3c1e58 url("img/intro-bg.jpg") center no-repeat; /*/ пока картинка не загрузилась - чтобы видеть фоновый цвет*/
+}
+
+/*блок intro_inner ограничивает ширину контента*/
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto; /*выровняли по центру*/
+    text-align: center;
+}
+
+.intro__title {
+    margin: 0 0 30px 0; /*сверху справа снизу слева*/
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 65px;
+    line-height: 1.1; /*межстрочный интервал, 1.1 от font-size, можно указывать и в пикселях*/
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    margin-bottom: 60px;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* BUTTON ============== */
+.btn {
+    display: inline-block; /*чтобы могли создавать padding, размеры и тд*/
+    vertical-align: top;
+    padding: 14px 40px;
+    border-radius: 5px;
+    font-family: inherit; /*Берем у родителя*/
+    /*если использовали бы <button>, то: border: 0; (т.к. у них есть границы по умолчанию) cursor: pointer; (чтобы менять вид курсора при наведении на кнопку;*/
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    /*чтобы при наведении цвет менялся более плавно*/
+    transition: background 0.1s linear;
+}
+
+.btn--red {
+    background-color: #e84545;
+}
+
+.btn--red:hover {
+    background-color: #c21e1e;
+}
