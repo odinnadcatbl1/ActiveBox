@@ -141,3 +141,101 @@ p{
 .btn--red:hover {
     background-color: #c21e1e;
 }
+
+
+/* FEATURES ============== */
+.features {
+    display: flex;
+    flex-wrap: wrap; /*разрешаем элементу переходить на новую строку, если он не помещается*/
+    margin: 100px 0; 
+}
+
+.features__item {
+    width: 33.33333%; /*поделили наш features на 3 по ширине*/
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.features__icon {
+    margin-bottom: 25px;
+}
+
+.features__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.features__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c7279;
+}
+
+
+/* FEATURES ============== */
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works__item {
+    width: 25%;
+    height: 350px;
+    position: relative;
+    overflow: hidden; /*скрываем всё, что выходит за пределы нашего блока*/
+    border-bottom: 1px solid #fff; /*добавим белые разделители между фото */
+    border-right: 1px solid #fff;
+}
+
+
+/*при наведении курсора убираем прозрачность с works__content*/
+.works__item:hover .works__content {
+    opacity: 1;
+}
+
+
+.works__photo {
+    position: absolute; /*картинка будет находиться внутри works__item и позиционироваться абсолютно относительно works__item*/
+    top: 50%; 
+    left: 50%; 
+    z-index: 1; /*будет находиться поверх item*/
+    
+    transform: translate3d(-50%, -50%, 0); /*выровняли картинку ровно по центру (x, y, z)*/
+}
+
+.works__content {
+    display: flex;
+    flex-direction: column; /*каждый элемент внутри занимает всю ширину и находится на новой строке*/
+    justify-content: center; /*расположили контент по центру*/
+    width: 100%;
+    height: 100%;
+    text-align: center; /*расположили текст по центру*/
+    background-color: rgba(232, 69, 69, 0.9); /*(red, green, blue, прозрачность(opacity)*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /*чтобы был поверх фотографии*/
+    opacity: 0; /*скрываем наш блок по умолчанию*/
+    transition: opacity 0.2s linear;
+}
+
+.works__title {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.works__text {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
