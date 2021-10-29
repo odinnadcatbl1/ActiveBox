@@ -26,8 +26,9 @@ p{
 /* Container ============ */
 .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto; /*внешние отступы по нулям снизу и сверху, и авто - выровнять по середине */
+    padding: 0 15px;
 }
 
 /* HEADER =========== */
@@ -238,4 +239,133 @@ p{
 }
 
 
+/* TEAM ============== */
 
+.team {
+    margin: 100px 0 70px; /*сверху 100, снизу 70 - т.к. каждый team__item и так имеет margin-bottom 30px*/
+}
+
+.team__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px; /*чтобы скомпенсировать padding у team__item, и они начинались ровно слева*/
+}
+
+.team__item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__photo {
+    margin-bottom: 20px;
+    display: block;
+    max-width: 100%;
+    height: auto; /*чтобы адаптировать и под мобильные устройства*/
+}
+
+.team__name {
+    margin-bottom: 9px;
+    font-size: 22px;
+    color: #2d3033
+}
+
+.team__prof {
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #e84545;
+    text-transform: uppercase;
+}
+
+.team__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c7279;
+}
+
+/* SOCIAL ===================*/
+
+.social {
+    display: flex;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center; /*выровняли по горизонтали*/
+    align-items: center; /*выровняли по вертикали логотип соц сети*/
+    margin-right: 4px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8ecee;
+    background-color: #fff;
+
+    transition: background 0.1s linear;
+}
+
+.social__item:hover {
+    background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+    fill: #000;
+}
+.social__icon {
+    display: block;
+    height: 18px; 
+    fill: #c6cacc;
+    transition: fill 0.1s linear;
+}
+
+
+/* REVIEWS ===================*/
+.reviews {
+    background-color: #53345a;
+    overflow: hidden; /*если картинки большие - чтобы не вылезали за границы нашего блока*/
+}
+
+.reviews__item {
+    display: flex;
+    flex-wrap: wrap; /*перенос на новую строку*/
+}
+
+.reviews__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.reviews__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1; /*закрепили фотографию слева внизу поверх reviews__photo*/
+
+    transform: translateY(-50%); /*чтобы в случае, если фотография высоты блока, она оцентровывалась (работает вместе с top: 50%)*/
+
+}
+
+.reviews__content {
+    display: flex; 
+    padding-left: 80px; /*чтобы отделить текст отзыва от фотографии*/
+    width: 50%;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reviews__text {
+    margin-bottom: 25px;
+    font-family: 'Cardo', sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.reviews__author {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
