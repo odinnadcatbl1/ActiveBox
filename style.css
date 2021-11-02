@@ -43,6 +43,17 @@ p{
     z-index: 1000;
 }
 
+.header.fixed {
+    position: fixed;
+    background: #31344e;
+    height: auto;
+}
+
+.header.fixed .header__inner {
+    padding: 15px 0;
+    border-bottom: 0;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between; /* это значит, что между элементами нашего header_inner будет пустое место*/
@@ -88,7 +99,7 @@ p{
     justify-content: center; /*чтобы выровнять контент по центру по вертикали*/
     height: 750px;
     padding-top: 100px; /*чтобы интро начиналось на таком расстояние(размер шапки), т.к. шапка поверх всего*/
-    background: #3c1e58 url("img/intro-bg.jpg") center no-repeat; /*/ пока картинка не загрузилась - чтобы видеть фоновый цвет*/
+    background: #31344e url("img/intro-bg.jpg") center no-repeat; /*/ пока картинка не загрузилась - чтобы видеть фоновый цвет*/
 	background-size: cover; /*убрали "/ cover" в строке выше, т.к. не поддерживается в firefox*/
 }
 
