@@ -365,8 +365,55 @@ p{
 
 .reviews__item {
     display: flex;
+    overflow: hidden; /*чтобы скрывать при слике*/
     flex-wrap: wrap; /*перенос на новую строку*/
 }
+
+.reviewsSlider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviewsSider.slick-initialized {
+    height: auto;
+}
+
+/*стили для точек, показывающих количество элементов скролла*/
+
+.slick-dots {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+    opacity: 0.5;
+
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+
 
 .reviews__photo {
     width: 50%;

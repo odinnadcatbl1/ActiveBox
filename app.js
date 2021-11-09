@@ -21,7 +21,19 @@ $(function() {
 
     });
     
+    /* Reviews */
+
+    let slider = $(".reviewsSlider");
+
     
+    slider.slick({
+        infinite: true, // если элементы заканчиваются - они повторяются заново
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: false, // чтобы затемнялись отзывы
+        arrows: false, // убрали кнопки (previous, next)
+        dots: true,
+    });
     
 
 });

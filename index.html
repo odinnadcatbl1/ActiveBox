@@ -3,6 +3,8 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans:700|Raleway:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--добавили мета-тег, чтобы сайт поддерживался на всех устройствах, ширина сайта = ширине устройства, initial-scale = 1 означает, что сайт будет по умолчанию загружаться без зума -->
     <title>ActiveBox</title>
@@ -312,15 +314,31 @@
 <!--REVIEWS(отзывы)-->
 <div class="reviews">
     <div class="container">
-        <div class="reviews__item">
-            <div class="reviews__photo">
-                <img class="reviews__img" src="img/reviews/review-1.jpg" alt="">
+        <div class="reviewsSlider">
+            <div class="slick-item">
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="img/reviews/review-1.jpg" alt="">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+                    </div>
+                </div> <!-- /.reviews__item -->
             </div>
-            <div class="reviews__content">
-                <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+
+            <div class="slick-item">
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="img/reviews/review-1.jpg" alt="">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+                    </div>
+                </div> <!-- /.reviews__item -->
             </div>
-        </div> <!-- /.reviews__item -->
+        </div>
     </div> <!-- /.container -->
 </div> <!-- /.reviews -->
 
@@ -394,6 +412,7 @@
 
 <!--JavaScript-->
 <script src="app.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
 </body>
